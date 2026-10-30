@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-profile-title>Portofolio – Project</title>
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+<div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+<header>
+  <a class="brand" href="index.html"><b>Portofolio - <span data-profile-name>Miftahul Huda</span></b></a>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="projects.html" aria-current="page">Project</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="phead">
+    <h1>Project</h1>
+    <p class="sub">Ini adalah kumpulan project yang telah saya kerjakan.</p>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Cari proyek atau teknologi" aria-label="Cari proyek" autocomplete="off">
+      <div id="chips" class="chips" role="group" aria-label="Filter kategori"></div>
+    </div>
+    <p id="count" class="count" aria-live="polite"></p>
+  </section>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>Tidak ada proyek yang cocok. Coba kata kunci lain atau pilih kategori Semua.</p>
+</main>
+<dialog id="dlg" aria-labelledby="dtitle">
+  <button id="dclose" type="button" aria-label="Tutup">×</button>
+  <img id="dimg" class="dimg" src="" alt="">
+  <div class="dbody">
+    <h2 id="dtitle"></h2>
+    <p id="dmeta" class="dmeta"></p>
+    <p id="ddesc"></p>
+    <div id="dtags" class="tags"></div>
+    <div id="dlinks"></div>
+  </div>
+</dialog>
+<footer>© 2026 Portofolio <span data-profile-name>Miftahul Huda</span>.</footer>
+<script src="js/config.js"></script>
+<script src="js/projects-data.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>

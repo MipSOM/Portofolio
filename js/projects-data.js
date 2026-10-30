@@ -1,0 +1,117 @@
+/* Data proyek. Tambah atau ubah proyek di sini.
+   thumb: gambar di assets/images/projects/ (ganti dengan tangkapan layar aslimu).
+   demo / repo: kosongkan ("") jika tidak ada, tombolnya otomatis disembunyikan. */
+var PROJECTS = [
+  {
+    id: "GYM",
+    title: "UI/UX Design Aplikasi Membership GYM",
+    category: "UI/UX Design",
+    year: 202,
+    color: "#2bb8a8",
+    thumb: "assets/images/projects/kopi.svg",
+    desc: "Desain antarmuka dan pengalaman pengguna untuk aplikasi keanggotaan gym.",
+    detail: "Aplikasi ini memungkinkan pengguna untuk mendaftar sebagai anggota gym, mengelola jadwal latihan, dan melacak kemajuan mereka. Fitur-fitur termasuk pemesanan kelas, pelacakan kebugaran, dan integrasi dengan perangkat wearable.",
+    role: "UI/UX Designer",
+    tags: ["Figma", "CorelDRAW"],
+    demo: "",
+    repo: ""
+  },
+  {
+    id: "Front-End",
+    title: "Website Cikopi Mang Eko",
+    category: "Front-End",
+    year: 2025,
+    color: "#e8559a",
+    thumb: "assets/images/projects/dashboard.svg",
+    desc: "Website untuk informasi toko kopi lokal.",
+    detail: "Website ini menyediakan informasi tentang toko kopi lokal, berbagai produk, dan layanan yang ditawarkan.",
+    role: "Frontend developer",
+    tags: ["HTML", "CSS", "JavaScript"],
+    demo: "",
+    repo: ""
+  },
+  {
+    id: "Machine Learning",
+    title: "Penghitung Botol Berbasis Computer Vision",
+    category: "Machine Learning",
+    year: 2026,
+    color: "#e0a82e",
+    thumb: "assets/images/projects/belajar.svg",
+    desc: "Aplikasi berbasis computer vision untuk menghitung jumlah botol dalam gambar atau video.",
+    detail: "Aplikasi ini menggunakan teknologi computer vision untuk menghitung jumlah botol dalam gambar atau video. Cocok untuk penggunaan di industri minuman.",
+    role: "Machine Learning Engineer",
+    tags: ["Python", "OpenCV"],
+    demo: "",
+    repo: ""
+  },
+  // {
+  //   id: "kasir",
+  //   title: "Aplikasi Kasir UMKM",
+  //   category: "Mobile",
+  //   year: 2025,
+  //   color: "#4f7cff",
+  //   thumb: "assets/images/projects/kasir.svg",
+  //   desc: "Aplikasi kasir yang tetap jalan tanpa internet dan sinkron saat online.",
+  //   detail: "Pencatatan transaksi, stok, dan laporan harian. Data disimpan lokal lebih dulu, lalu disinkronkan otomatis ketika koneksi tersedia.",
+  //   role: "Mobile developer",
+  //   tags: ["Flutter", "SQLite", "Firebase"],
+  //   demo: "",
+  //   repo: "https://github.com/username/kasir"
+  // },
+  // {
+  //   id: "event",
+  //   title: "Landing Page Event Musik",
+  //   category: "Desain UI",
+  //   year: 2025,
+  //   color: "#7a3cff",
+  //   thumb: "assets/images/projects/event.svg",
+  //   desc: "Halaman promosi festival dengan animasi dan elemen 3D.",
+  //   detail: "Desain dibuat di Figma, lalu diwujudkan dengan animasi scroll dan objek 3D ringan. Penjualan tiket awal habis dalam dua minggu.",
+  //   role: "UI designer dan frontend developer",
+  //   tags: ["Figma", "Three.js", "GSAP"],
+  //   demo: "https://contoh.com/event",
+  //   repo: ""
+  // },
+  // {
+  //   id: "klinik",
+  //   title: "Sistem Reservasi Klinik",
+  //   category: "Web App",
+  //   year: 2024,
+  //   color: "#2bb8a8",
+  //   thumb: "assets/images/projects/klinik.svg",
+  //   desc: "Pendaftaran pasien online, jadwal dokter, dan pengingat otomatis.",
+  //   detail: "Pasien memilih dokter dan jam praktik, lalu menerima pengingat lewat WhatsApp. Staf klinik mengelola antrean dari satu dasbor.",
+  //   role: "Backend developer",
+  //   tags: ["Laravel", "MySQL", "Vue"],
+  //   demo: "",
+  //   repo: ""
+  // },
+  // {
+  //   id: "olahraga",
+  //   title: "Aplikasi Pelacak Olahraga",
+  //   category: "Mobile",
+  //   year: 2024,
+  //   color: "#ff7a45",
+  //   thumb: "assets/images/projects/olahraga.svg",
+  //   desc: "Mencatat latihan, target mingguan, dan perkembangan dengan grafik.",
+  //   detail: "Pengguna mencatat latihan, menetapkan target, dan mendapat lencana pencapaian. Grafik mingguan menampilkan progres secara ringkas.",
+  //   role: "Mobile developer",
+  //   tags: ["React Native", "Expo"],
+  //   demo: "https://contoh.com/olahraga",
+  //   repo: "https://github.com/username/olahraga"
+  // },
+  // {
+  //   id: "bank",
+  //   title: "Sistem Desain Bank Digital",
+  //   category: "Desain UI",
+  //   year: 2024,
+  //   color: "#1d2358",
+  //   thumb: "assets/images/projects/bank.svg",
+  //   desc: "Pustaka komponen dan pedoman desain untuk aplikasi perbankan.",
+  //   detail: "Lebih dari 60 komponen, token warna dan tipografi, serta panduan aksesibilitas. Dipakai tiga tim produk agar tampilan tetap konsisten.",
+  //   role: "UI designer",
+  //   tags: ["Figma", "Design system"],
+  //   demo: "",
+  //   repo: ""
+  // }
+];

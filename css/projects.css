@@ -1,0 +1,254 @@
+.blob{
+  position:fixed;width:46vmax;
+  height:46vmax;
+  border-radius:50%;
+  filter:blur(90px);
+  opacity:.26;z-index:0;
+  pointer-events:none;
+  animation:drift 24s ease-in-out infinite alternate
+}
+
+.b1{
+  background:var(--a1);top:-18vmax;left:-14vmax
+}
+
+.b2{
+  background:var(--a2);bottom:-20vmax;
+  right:-14vmax;
+  animation-delay:-9s
+}
+
+@keyframes drift{
+  to{
+    transform:translate(8vmax,6vmax) scale(1.12)
+  }
+}
+
+.brand{
+  text-decoration:none
+}
+
+nav a[aria-current]{
+  color:var(--tx);font-weight:600
+}
+
+.phead{
+  padding:40px 0 20px
+}
+
+.phead h1{
+  font-size:clamp(2.4rem,6vw,4rem);
+  line-height:1.05;
+  margin:0 0 10px;
+  letter-spacing:-.03em;
+  font-weight:800
+}
+
+.tools{
+  display:flex;
+  flex-wrap:wrap;gap:14px;
+  align-items:center;
+  margin-bottom:12px
+}
+
+#q{
+  flex:1 1 240px;max-width:360px;
+  padding:11px 16px;
+  border-radius:999px;
+  border:1.5px solid var(--line);
+  background:var(--panel);
+  color:var(--tx);
+  font:inherit
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+
+.chip{
+  padding:8px 16px;
+  border-radius:999px;
+  border:1.5px solid var(--line);
+  background:var(--panel);
+  color:var(--tx);
+  font:inherit;
+  font-size:.92rem;
+  cursor:pointer;
+  transition:background .2s,color .2s
+}
+
+.chip:hover{
+  border-color:var(--tx)
+}
+
+.chip[aria-pressed="true"]{
+  background:var(--btn);color:var(--btnt);
+  border-color:var(--btn)
+}
+
+.count{
+  margin:0;
+  color:var(--mut);
+  font-size:.9rem
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:24px;
+  padding:20px 0 70px;
+  perspective:1200px
+}
+
+.card{
+  position:relative;
+  display:block;
+  background:var(--panel);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);border:1px solid var(--line);
+  border-radius:20px;overflow:hidden;
+  cursor:pointer;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transition:transform .18s ease-out,box-shadow .25s;
+  box-shadow:0 1px 0 var(--line)
+}
+
+.card:hover{
+  box-shadow:0 18px 40px -18px var(--c)
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .2s;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.2),transparent 55%)
+}
+
+.card:hover::after{
+  opacity:1
+}
+
+.thumb{
+  display:block;
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover
+}
+
+.cbody{
+  padding:18px 20px 22px
+}
+
+.meta{
+  display:flex;
+  justify-content:space-between;
+  color:var(--mut);
+  font-size:.85rem
+}
+
+.cat::before{
+  content:"";
+  display:inline-block;
+  width:9px;
+  height:9px;border-radius:50%;
+  background:var(--c);margin-right:8px
+}
+
+.cbody h3{margin:8px 0 6px;font-size:1.25rem;line-height:1.25}
+.cbody p{
+  margin:0 0 14px;
+  color:var(--mut);
+  font-size:.95rem;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px
+}
+
+.tag{
+  font-size:.78rem;
+  padding:3px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);color:var(--mut)
+}
+
+.empty{
+  text-align:center;
+  color:var(--mut);
+  padding:40px 0 80px
+}
+
+dialog{
+  border:1px solid var(--line);
+  border-radius:22px;padding:0;
+  width:min(720px,calc(100% - 32px));
+  max-height:calc(100dvh - 32px);
+  overflow:auto;background:var(--bg);
+  color:var(--tx)
+}
+
+dialog::backdrop{
+  background:rgba(10,12,30,.55);
+  backdrop-filter:blur(6px)
+}
+
+.dimg{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-bottom:4px solid var(--c)
+}
+
+.dbody{
+  padding:clamp(20px,4vw,32px)
+}
+
+.dbody h2{
+  margin:0 0 4px
+}
+
+.dmeta{
+  margin:0 0 14px;
+  color:var(--mut)
+}
+.dbody .tags{
+  margin:16px 0 22px
+}
+#dlinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+#dclose{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:0;
+  background:var(--btn);
+  color:var(--btnt);
+  font-size:1.3rem;
+  line-height:1;
+  cursor:pointer
+}
+@media(prefers-reduced-motion:reduce){
+  .blob{
+    animation:none
+  }
+  .card{
+    transform:none!important
+  }
+}
