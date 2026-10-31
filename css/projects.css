@@ -202,12 +202,19 @@ dialog::backdrop{
   backdrop-filter:blur(6px)
 }
 
+.dmedia{
+  border-bottom:4px solid var(--c)
+}
+
 .dimg{
   display:block;
   width:100%;
   aspect-ratio:16/9;
-  object-fit:cover;
-  border-bottom:4px solid var(--c)
+  object-fit:cover
+}
+
+.dmedia [hidden]{
+  display:none
 }
 
 .dbody{

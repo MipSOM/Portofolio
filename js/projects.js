@@ -150,7 +150,21 @@
   });
 
   function openDetail(p) {
-    $("#dimg").src = p.thumb;
+    var image = $("#dimg");
+    var video = $("#dvideo");
+
+    if (p.video) {
+      image.hidden = true;
+      video.hidden = false;
+      video.src = p.video;
+      video.poster = p.thumb;
+      video.load();
+    } else {
+      stopVideo();
+      image.hidden = false;
+      image.src = p.thumb;
+    }
+
     $("#dtitle").textContent = p.title;
     $("#dmeta").textContent = p.category + " · " + p.year + " · " + p.role;
     $("#ddesc").textContent = p.detail;
@@ -186,7 +200,18 @@
     }
   }
 
+  function stopVideo() {
+    var video = $("#dvideo");
+    video.pause();
+    video.removeAttribute("src");
+    video.removeAttribute("poster");
+    video.load();
+    video.hidden = true;
+  }
+
   function closeDetail() {
+    stopVideo();
+
     if (dlg.close) {
       dlg.close();
     } else {
@@ -195,6 +220,7 @@
   }
 
   $("#dclose").addEventListener("click", closeDetail);
+  dlg.addEventListener("close", stopVideo);
   dlg.addEventListener("click", function (e) {
     if (e.target === dlg) {
       closeDetail();
